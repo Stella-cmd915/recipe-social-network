@@ -1,0 +1,90 @@
+/* ============================================================
+   RecipeNet - Custom Styles
+   ============================================================ */
+
+body {
+    background-color: #f7f9fc;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+/* Cards */
+.recipe-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+.recipe-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1) !important;
+}
+
+.recipe-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.recipe-hero {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Likes */
+.like-btn {
+    border: none;
+    background: transparent;
+    transition: transform 0.15s ease;
+}
+.like-btn:hover {
+    transform: scale(1.15);
+}
+.like-btn.liked .bi-heart {
+    color: #dc3545;
+}
+.like-btn .bi {
+    font-size: 1.2rem;
+}
+
+/* Profile */
+.profile-avatar {
+    font-weight: bold;
+}
+
+/* Password strength indicator */
+#pwStrength.weak { background-color: #dc3545; }
+#pwStrength.medium { background-color: #ffc107; }
+#pwStrength.strong { background-color: #198754; }
+
+/* Comments */
+#commentList .card {
+    border-left: 3px solid #0d6efd;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+    .recipe-img { height: 160px; }
+    h1 { font-size: 1.6rem; }
+}
+
+/* Animation για νέα σχόλια */
+.comment-new {
+    animation: fadeInDown 0.4s ease;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Like animation */
+.like-pop {
+    animation: pop 0.3s ease;
+}
+@keyframes pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
